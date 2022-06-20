@@ -1,0 +1,61 @@
+package com.SeleniumProject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
+
+public class SourcrFuseTrail {
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		// for login
+		driver.get("http://sfwebhtml:t63KUfxL5vUyFLG4eqZNUcuRQ@sfwebhtml.sourcefuse.com/automation-form-demo-for-interview/");
+		System.out.println("Test Case 4: Submit the form after filling all details properly by using XPath only. ");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//*[@id=\"fnameInput\"]/input")).sendKeys("Bhaskar Rao");
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//*[@id=\"lnameInput\"]/input")).sendKeys("Setti");
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//*[@id=\"emailInput\"]/input")).sendKeys("Bhaskarsetti9690@gmail.com");
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//*[@id=\"curCompanyInput\"]/input")).sendKeys("XYZ info Tech");
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//*[@id=\"mobInput\"]/input")).sendKeys("+91 0987654321");
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//*[@id=\"DOBInput\"]/div/input")).sendKeys("21/06/1990");
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//*[@id=\"positionInput\"]/input")).sendKeys("Automation Testing");
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//*[@id=\"portfolioInput\"]/input")).sendKeys("Bhaskarsetti.com");
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//*[@id=\"salaryInput\"]/input")).sendKeys(" 7 to 8 LPA");
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//*[@id=\"whenStartInput\"]/input")).sendKeys("July 5th");
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//*[@id=\"address\"]")).sendKeys("7-45/ ramanagar street, vijayawada, A.P");
+		Thread.sleep(200);
+		driver.findElement(By.xpath("//*[@id=\"resume\"]")).sendKeys("D:\\Bhaskar 's\\Documents\\Telegram Desktop");
+		Thread.sleep(300);
+		driver.findElement(By.xpath("//*[@id=\"yes\"]")).click();
+		Thread.sleep(200);
+		driver.findElement(By.xpath("/html/body/div/form/button[1]")).click();
+		
+		Thread.sleep(3000);
+		
+		
+		
+		driver.close();
+		
+		
+		
+	}
+
+	
+}
